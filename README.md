@@ -33,8 +33,6 @@ PROD_ORIGIN=https://example.com
 Variable	Description
 DEV	        true or false
 PORT	    server port
-API_DEV	    dev API URL
-API_PROD	production API URL
 DEV_ORIGIN	allowed dev origin
 PROD_ORIGIN	allowed production origin
 ```
