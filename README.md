@@ -25,9 +25,6 @@ Create a .env file.
 DEV=true
 PORT=8080
 
-API_DEV=http://localhost:8080
-API_PROD=https://api.example.com
-
 DEV_ORIGIN=http://localhost:5173
 PROD_ORIGIN=https://example.com
 ```
@@ -109,8 +106,6 @@ handler := httpkit.CORS(runtime)(mux)
 Runtime Structure
 type Runtime struct {
 	Dev        bool
-	APIDev     string
-	APIProd    string
 	DevOrigin  string
 	ProdOrigin string
 	Port       string
