@@ -45,21 +45,11 @@ func GetPort() string {
 func Validate() {
 
 	dev := os.Getenv("DEV")
-	apiDev := os.Getenv("API_DEV")
-	apiProd := os.Getenv("API_PROD")
 	devOrigin := os.Getenv("DEV_ORIGIN")
 	prodOrigin := os.Getenv("PROD_ORIGIN")
 
 	if dev != "true" && dev != "false" {
 		log.Fatal("ENV DEV must be 'true' or 'false'")
-	}
-
-	if dev == "true" && apiDev == "" {
-		log.Fatal("ENV API_DEV is not set")
-	}
-
-	if apiProd == "" {
-		log.Fatal("ENV API_PROD is not set")
 	}
 
 	if dev == "true" && devOrigin == "" {
